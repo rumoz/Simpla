@@ -199,20 +199,20 @@
 		{foreach $purchases as $purchase}
 		<tr>
 			<td>
-				<span class=view_purchase>
+				<span class="view_purchase">
 					{$purchase->product_name} {$purchase->variant_name} {if $purchase->sku} (артикул {$purchase->sku}){/if}			
 				</span>
 			</td>
 			<td class="align_right">
-				<span class=view_purchase>{$purchase->price}</span> {$currency->sign}
+				<span class="view_purchase">{$purchase->price}</span> {$currency->sign}
 			</td>
 			<td class="align_right">			
-				<span class=view_purchase>
+				<span class="view_purchase">
 					{$purchase->amount} {$settings->units}
 				</span>
 			</td>
 			<td class="align_right">
-				<span class=view_purchase>{$purchase->price*$purchase->amount}</span> {$currency->sign}
+				<span class="view_purchase">{$purchase->price*$purchase->amount}</span> {$currency->sign}
 			</td>
 		</tr>
 		{/foreach}
