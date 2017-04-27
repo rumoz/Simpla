@@ -37,18 +37,18 @@
 		<div class="block">
 			<h2>Настройки сайта</h2>
 			<ul>
-				<li><label class=property>Имя сайта</label><input name="site_name" class="simpla_inp" type="text" value="{$settings->site_name|escape}" /></li>
-				<li><label class=property>Имя компании</label><input name="company_name" class="simpla_inp" type="text" value="{$settings->company_name|escape}" /></li>
-				<li><label class=property>Формат даты</label><input name="date_format" class="simpla_inp" type="text" value="{$settings->date_format|escape}" /></li>
-				<li><label class=property>Email для восстановления пароля</label><input name="admin_email" class="simpla_inp" type="text" value="{$settings->admin_email|escape}" /></li>
+				<li><label class="property">Имя сайта</label><input name="site_name" class="simpla_inp" type="text" value="{$settings->site_name|escape}" /></li>
+				<li><label class="property">Имя компании</label><input name="company_name" class="simpla_inp" type="text" value="{$settings->company_name|escape}" /></li>
+				<li><label class="property">Формат даты</label><input name="date_format" class="simpla_inp" type="text" value="{$settings->date_format|escape}" /></li>
+				<li><label class="property">Email для восстановления пароля</label><input name="admin_email" class="simpla_inp" type="text" value="{$settings->admin_email|escape}" /></li>
 			</ul>
 		</div>
 		<div class="block layer">
 			<h2>Оповещения</h2>
 			<ul>
-				<li><label class=property>Оповещение о заказах</label><input name="order_email" class="simpla_inp" type="text" value="{$settings->order_email|escape}" /></li>
-				<li><label class=property>Оповещение о комментариях</label><input name="comment_email" class="simpla_inp" type="text" value="{$settings->comment_email|escape}" /></li>
-				<li><label class=property>Обратный адрес оповещений</label><input name="notify_from_email" class="simpla_inp" type="text" value="{$settings->notify_from_email|escape}" /></li>
+				<li><label class="property">Оповещение о заказах</label><input name="order_email" class="simpla_inp" type="text" value="{$settings->order_email|escape}" /></li>
+				<li><label class="property">Оповещение о комментариях</label><input name="comment_email" class="simpla_inp" type="text" value="{$settings->comment_email|escape}" /></li>
+				<li><label class="property">Обратный адрес оповещений</label><input name="notify_from_email" class="simpla_inp" type="text" value="{$settings->notify_from_email|escape}" /></li>
 			</ul>
 		</div>
 		<!-- Параметры (The End)-->
@@ -57,13 +57,13 @@
 		<div class="block layer">
 			<h2>Формат цены</h2>
 			<ul>
-				<li><label class=property>Разделитель копеек</label>
+				<li><label class="property">Разделитель копеек</label>
 					<select name="decimals_point" class="simpla_inp">
 						<option value='.' {if $settings->decimals_point == '.'}selected{/if}>точка: 12.45 {$currency->sign|escape}</option>
 						<option value=',' {if $settings->decimals_point == ','}selected{/if}>запятая: 12,45 {$currency->sign|escape}</option>
 					</select>
 				</li>
-				<li><label class=property>Разделитель тысяч</label>
+				<li><label class="property">Разделитель тысяч</label>
 					<select name="thousands_separator" class="simpla_inp">
 						<option value='' {if $settings->thousands_separator == ''}selected{/if}>без разделителя: 1245678 {$currency->sign|escape}</option>
 						<option value=' ' {if $settings->thousands_separator == ' '}selected{/if}>пробел: 1 245 678 {$currency->sign|escape}</option>
@@ -80,10 +80,10 @@
 		<div class="block layer">
 			<h2>Настройки каталога</h2>
 			<ul>
-				<li><label class=property>Товаров на странице сайта</label><input name="products_num" class="simpla_inp" type="text" value="{$settings->products_num|escape}" /></li>
-				<li><label class=property>Товаров на странице админки</label><input name="products_num_admin" class="simpla_inp" type="text" value="{$settings->products_num_admin|escape}" /></li>
-				<li><label class=property>Максимум товаров в заказе</label><input name="max_order_amount" class="simpla_inp" type="text" value="{$settings->max_order_amount|escape}" /></li>
-				<li><label class=property>Единицы измерения товаров</label><input name="units" class="simpla_inp" type="text" value="{$settings->units|escape}" /></li>
+				<li><label class="property">Товаров на странице сайта</label><input name="products_num" class="simpla_inp" type="text" value="{$settings->products_num|escape}" /></li>
+				<li><label class="property">Товаров на странице админки</label><input name="products_num_admin" class="simpla_inp" type="text" value="{$settings->products_num_admin|escape}" /></li>
+				<li><label class="property">Максимум товаров в заказе</label><input name="max_order_amount" class="simpla_inp" type="text" value="{$settings->max_order_amount|escape}" /></li>
+				<li><label class="property">Единицы измерения товаров</label><input name="units" class="simpla_inp" type="text" value="{$settings->units|escape}" /></li>
 			</ul>
 		</div>
 		<!-- Параметры (The End)-->
@@ -93,15 +93,15 @@
 			<h2>Изображения товаров</h2>
 			
 			<ul>
-				<li><label class=property>Водяной знак</label>
+				<li><label class="property">Водяной знак</label>
 				<input name="watermark_file" class="simpla_inp" type="file" />
 
 				<img style='display:block; border:1px solid #d0d0d0; margin:10px 0 10px 0;' src="{$config->root_url}/{$config->watermark_file}?{math equation='rand(10,10000)'}">
 				</li>
-				<li><label class=property>Горизонтальное положение водяного знака</label><input name="watermark_offset_x" class="simpla_inp" type="text" value="{$settings->watermark_offset_x|escape}" /> %</li>
-				<li><label class=property>Вертикальное положение водяного знака</label><input name="watermark_offset_y" class="simpla_inp" type="text" value="{$settings->watermark_offset_y|escape}" /> %</li>
-				<li><label class=property>Прозрачность знака (больше &mdash; прозрачней)</label><input name="watermark_transparency" class="simpla_inp" type="text" value="{$settings->watermark_transparency|escape}" /> %</li>
-				<li><label class=property>Резкость изображений (рекомендуется 20%)</label><input name="images_sharpen" class="simpla_inp" type="text" value="{$settings->images_sharpen|escape}" /> %</li>
+				<li><label class="property">Горизонтальное положение водяного знака</label><input name="watermark_offset_x" class="simpla_inp" type="text" value="{$settings->watermark_offset_x|escape}" /> %</li>
+				<li><label class="property">Вертикальное положение водяного знака</label><input name="watermark_offset_y" class="simpla_inp" type="text" value="{$settings->watermark_offset_y|escape}" /> %</li>
+				<li><label class="property">Прозрачность знака (больше &mdash; прозрачней)</label><input name="watermark_transparency" class="simpla_inp" type="text" value="{$settings->watermark_transparency|escape}" /> %</li>
+				<li><label class="property">Резкость изображений (рекомендуется 20%)</label><input name="images_sharpen" class="simpla_inp" type="text" value="{$settings->images_sharpen|escape}" /> %</li>
 			</ul>
 		</div>
 		<!-- Параметры (The End)-->
@@ -111,11 +111,11 @@
 		<div class="block layer">
 			<h2>Интеграция с <a href="http://prostiezvonki.ru">простыми звонками</a></h2>
 			<ul>
-				<li><label class=property>Сервер</label><input name="pz_server" class="simpla_inp" type="text" value="{$settings->pz_server|escape}" /></li>
-				<li><label class=property>Пароль</label><input name="pz_password" class="simpla_inp" type="text" value="{$settings->pz_password|escape}" /></li>
-				<li><label class=property>Телефоны менеджеров:</label></li>
+				<li><label class="property">Сервер</label><input name="pz_server" class="simpla_inp" type="text" value="{$settings->pz_server|escape}" /></li>
+				<li><label class="property">Пароль</label><input name="pz_password" class="simpla_inp" type="text" value="{$settings->pz_password|escape}" /></li>
+				<li><label class="property">Телефоны менеджеров:</label></li>
 				{foreach $managers as $manager}
-				<li><label class=property>{$manager->login}</label><input name="pz_phones[{$manager->login}]" class="simpla_inp" type="text" value="{$settings->pz_phones[$manager->login]|escape}" /></li>
+				<li><label class="property">{$manager->login}</label><input name="pz_phones[{$manager->login}]" class="simpla_inp" type="text" value="{$settings->pz_phones[$manager->login]|escape}" /></li>
 				{/foreach}
 			</ul>
 		</div>
